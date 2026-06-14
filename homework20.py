@@ -1,0 +1,10 @@
+a=int(input("enter the number of days you lived: "))
+b=int(input("enter the number of months you lived: "))
+def bits(n, width=4):
+    return format(n & ((1 << width) - 1), f'0{width}b')
+a1=( bits(a))
+b1=( bits(b))
+a2=( bits(a & b))
+b2=( bits(a | b))
+to=( bits(a2^b2))
+print("your secret code is: ",to)
